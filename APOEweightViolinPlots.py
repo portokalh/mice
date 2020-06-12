@@ -1,5 +1,5 @@
 import plotly.graph_objects as go
-
+import os
 import pandas as pd
 #from plotly.offline import init_notebook_mode, plot_mpl
 
@@ -40,6 +40,4 @@ fig.update_traces(box_visible=True, meanline_visible=True)
 fig.update_layout(violinmode='group')
 fig.show()
 
-plot_mpl(fig)
-    # If you want to to download an image of the figure as well
-plot_mpl(fig, image='body_wight.png')
+fig.write_image("body_weight.png")
